@@ -61,7 +61,7 @@
         "descripcion_detallada": "Esta aplicación de consola (CLI) es una recreación completa y funcional del clásico juego de adivinanza de palabras Wordle. Desarrollado íntegramente en Java SE 17, el proyecto destaca por una arquitectura altamente modular fundamentada en los principios de la Programación Orientada a Objetos (POO). El sistema integra un gestor de Entrada/Salida (I/O) que carga dinámicamente diccionarios de palabras desde archivos de texto, y un motor interactivo que procesa la entrada del usuario ofreciendo una experiencia inmersiva directamente en la terminal mediante el uso de códigos de color ANSI.",
         "reto_tecnico": "El principal desafío consistió en diseñar un algoritmo de evaluación de caracteres preciso y gestionar eficientemente la responsabilidad de las clases. Para el motor lógico, implementé un sistema de validación que evalúa cada carácter de la entrada frente a la palabra secreta, calculando coincidencias exactas y parciales para inyectar retroalimentación visual en tiempo real. A nivel arquitectónico, apliqué una fuerte separación de responsabilidades: la lógica central, la evaluación visual y el manejo de flujos de datos ('BufferedReader' para el pool de palabras y guardado del historial) operan en clases independientes, garantizando un código limpio, mantenible y escalable.",
         "tecnologias": ["Java SE 17", "OOP", "File I/O", "Data Structures", "CLI"],
-        "enlace": "https://github.com/victoriam312/Wordle-CLI-Java",
+        "enlace": "https://github.com/victoriam312/Java_console_Wordle",
         "categoria": "Software"
     },
 
