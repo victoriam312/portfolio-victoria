@@ -1,0 +1,90 @@
+[
+    {
+        "id": "procesador-xml",
+        "titulo": "Procesador de Contratos XML",
+        "descripcion": "Aplicación Java para la ingesta, procesamiento y transformación de grandes volúmenes de datos de contratos públicos hacia una base de datos MySQL.",
+        "descripcion_detallada": "Este desarrollo consiste en una herramienta especializada en la gestión y migración de datos de contratos públicos procedentes de la Junta de Andalucía. La aplicación se encarga de leer ficheros XML estructurados con un gran volumen de registros, procesar e insertar de manera óptima dicha información en un modelo relacional en MySQL y, finalmente, exportar un nuevo archivo XML secundario totalmente sanitizado, del cual se han eliminado automáticamente los campos protegidos o sensibles para su distribución pública.",
+        "reto_tecnico": "El principal desafío técnico radicó en la gestión eficiente de la memoria RAM al procesar ficheros XML masivos. Para evitar desbordamientos de memoria (OutOfMemoryError), diseñé una arquitectura híbrida de parseo utilizando JAXP: implementé un lector basado en SAX Parser para realizar una lectura secuencial orientada a eventos con un consumo mínimo de recursos. Para la persistencia de datos, utilicé JDBC configurado con 'PreparedStatement', lo que optimizó la velocidad de las inserciones y blindó el sistema contra ataques de inyección SQL. Por último, empleé DOM Parser en la fase de escritura, donde la estructura jerárquica en memoria era necesaria para manipular, filtrar y reescribir con precisión el árbol XML de salida.",
+        "tecnologias": ["Java", "MySQL", "JDBC", "SAX Parser", "DOM Parser", "JAXP"],
+        "enlace": "https://github.com/victoriam312/Procesador_contratos_xml_java",
+        "categoria": "Backend"
+    },
+
+    {
+        "id": "concesionario-multihilo",
+        "titulo": "Simulador Concesionario Multihilo",
+        "descripcion": "Simulación de un sistema de gestión de recursos limitados mediante programación concurrente y sincronización de hilos en Java.",
+        "descripcion_detallada": "Este proyecto es una simulación interactiva desarrollada para la asignatura de Programación de Servicios y Procesos (PSP). El sistema modela un escenario complejo de concurrencia donde una flota limitada de recursos compartidos (4 vehículos) debe ser gestionada de forma eficiente y segura entre un número superior de peticiones de clientes simultáneos (9 hilos activos independientes).",
+        "reto_tecnico": "El reto fundamental consistió en evitar el entrelazado caótico de los hilos y asegurar la exclusión mutua en el acceso a la flota. Para solucionarlo, implementé un control de concurrencia avanzado mediante la clase Semaphore configurada con 4 permisos, encargada de gestionar de forma segura la cola de espera de los clientes y controlar el aforo máximo. Adicionalmente, apliqué bloques 'synchronized' (Monitores) para proteger las secciones críticas del código, garantizando la integridad de los datos compartidos en entornos multihilo sin provocar bloqueos mutuos (deadlocks).",
+        "tecnologias": ["Java", "Multithreading", "Concurrency", "Semaphores", "Monitors"],
+        "enlace": "https://github.com/victoriam312/ConcesionarioMultihilo",
+        "categoria": "Backend"
+    },
+
+    {
+        "id": "smart-ocupation",
+        "titulo": "SmartOcupation",
+        "descripcion": "Aplicación de escritorio Java Swing con arquitectura MVC y patrón DAO para la gestión inmobiliaria, filtrado dinámico y reporting automatizado.",
+        "descripcion_detallada": "Esta herramienta de escritorio fue diseñada y desarrollada como solución integral para la gestión operativa en el sector inmobiliario. La aplicación centraliza el control y la consulta del histórico de alquileres de viviendas en una interfaz intuitiva, permitiendo al personal de gestión realizar búsquedas avanzadas por rangos cronológicos específicos y emitir reportes formales listos para impresión o distribución a demanda.",
+        "reto_tecnico": "El principal desafío del proyecto consistió en mantener un código altamente cohesivo y escalable en un entorno con múltiples dependencias de UI y base de datos. Para solucionarlo, implementé una arquitectura desacoplada bajo los patrones MVC y DAO, aislando por completo la lógica de negocio y las consultas relacionales complejas (INNER JOINs optimizados en MySQL) de la interfaz gráfica. La usabilidad del filtrado temporal se resolvió integrando de forma nativa el JavaBean externo 'JDateChooser'. Finalmente, se garantizó la fiabilidad de los métodos críticos de acceso a datos mediante la automatización de pruebas unitarias con JUnit 5, y se estructuró un sistema de reporting directo a PDF utilizando las rutinas nativas de impresión de componentes.",
+        "tecnologias": ["Java Swing", "MVC / DAO", "MySQL", "JUnit 5", "Reporting (PDF)"],
+        "enlace": "https://github.com/victoriam312/SmartOcupation-JavaSwing",
+        "categoria": "Software"
+    },
+
+    {
+        "id": "conversor-unidades",
+        "titulo": "Conversor de Unidades Nativo",
+        "descripcion": "Aplicación nativa Android para conversión rápida de longitud, peso y temperatura con persistencia de estado local.",
+        "descripcion_detallada": "Se trata de una aplicación móvil nativa para el ecosistema Android diseñada para realizar conversiones instantáneas entre diferentes unidades de medida. La herramienta cubre tres áreas principales de conversión: Longitud (metros a kilómetros), Peso (gramos a kilogramos) y Temperatura (Celsius a Fahrenheit). Este proyecto fue concebido y desarrollado íntegramente en Java como parte de la asignatura de Programación Multimedia del ciclo formativo DAM.",
+        "reto_tecnico": "El reto principal fue garantizar una experiencia de usuario fluida y robusta, gestionando correctamente el ciclo de vida de la aplicación. Para solucionarlo, implementé programación defensiva mediante la validación estricta de inputs y la optimización del teclado numérico, evitando cierres inesperados. A nivel de interfaz, el diseño se estructuró con ConstraintLayout y TableLayout para asegurar total adaptabilidad. Además, se integró SharedPreferences para la persistencia de datos, permitiendo conservar el último estado de la app incluso tras ser cerrada.",
+        "tecnologias": ["Java", "Android Studio", "SharedPreferences", "XML"],
+        "enlace": "https://github.com/victoriam312/Conversor-Unidades-Android",
+        "categoria": "Mobile App"
+    },
+
+    {
+        "id": "java-jdbc-connection",
+        "titulo": "Core JDBC Base Connection",
+        "descripcion": "Arquitectura base modular para la conexión segura a bases de datos MySQL, enfocada en la prevención de fugas de recursos mediante JDBC y Maven.",
+        "descripcion_detallada": "Este desarrollo establece la capa base de conectividad de datos necesaria para interactuar con sistemas de gestión relacionales. Diseñado originalmente como componente estructural para la asignatura de Acceso a Datos, el sistema encapsula la lógica de conexión a un esquema de base de datos enfocado en la gestión de información del sector hotelero. Utiliza Maven como gestor de dependencias para integrar el controlador de MySQL y plantea una arquitectura modular donde los parámetros de configuración de red y las rutinas de consulta operan de forma totalmente desacoplada.",
+        "reto_tecnico": "El enfoque técnico principal consistió en garantizar la estabilidad del servidor de base de datos evitando el agotamiento de recursos o 'memory leaks' generados por conexiones mal cerradas. Para ello, implementé un control estricto del ciclo de vida de los objetos JDBC (Connection, Statement, ResultSet) utilizando bloques 'try-with-resources'. Esta estructura de programación defensiva asegura el cierre determinista y automático de los flujos de red tras cada consulta, independientemente de si la operación resulta exitosa o lanza una excepción.",
+        "tecnologias": ["Java", "JDBC", "MySQL", "Maven", "Security Architecture"],
+        "enlace": "https://github.com/victoriam312/Java-jdbc-basic-connection",
+        "categoria": "Backend"
+    },
+
+    {
+        "id": "java-wordle",
+        "titulo": "Wordle CLI Clone",
+        "descripcion": "Implementación orientada a objetos del popular juego interactivo para consola, con gestión de archivos y motor de retroalimentación ANSI.",
+        "descripcion_detallada": "Esta aplicación de consola (CLI) es una recreación completa y funcional del clásico juego de adivinanza de palabras Wordle. Desarrollado íntegramente en Java SE 17, el proyecto destaca por una arquitectura altamente modular fundamentada en los principios de la Programación Orientada a Objetos (POO). El sistema integra un gestor de Entrada/Salida (I/O) que carga dinámicamente diccionarios de palabras desde archivos de texto, y un motor interactivo que procesa la entrada del usuario ofreciendo una experiencia inmersiva directamente en la terminal mediante el uso de códigos de color ANSI.",
+        "reto_tecnico": "El principal desafío consistió en diseñar un algoritmo de evaluación de caracteres preciso y gestionar eficientemente la responsabilidad de las clases. Para el motor lógico, implementé un sistema de validación que evalúa cada carácter de la entrada frente a la palabra secreta, calculando coincidencias exactas y parciales para inyectar retroalimentación visual en tiempo real. A nivel arquitectónico, apliqué una fuerte separación de responsabilidades: la lógica central, la evaluación visual y el manejo de flujos de datos ('BufferedReader' para el pool de palabras y guardado del historial) operan en clases independientes, garantizando un código limpio, mantenible y escalable.",
+        "tecnologias": ["Java SE 17", "OOP", "File I/O", "Data Structures", "CLI"],
+        "enlace": "https://github.com/victoriam312/Wordle-CLI-Java",
+        "categoria": "Software"
+    },
+
+    {
+        "id": "gym-landing",
+        "titulo": "Gym Store Landing Page",
+        "descripcion": "Landing page y sitio web estático para e-commerce de fitness, construido con HTML5 semántico y maquetación CSS3 avanzada.",
+        "descripcion_detallada": "Este proyecto web frontend simula el portal corporativo y la tienda online de una marca de productos de entrenamiento. Desarrollado como práctica final para la asignatura de Lenguaje de Marcas (LM), el sitio destaca por una estructura de navegación clara y una interfaz visual inmersiva. Incluye galerías de productos distribuidas dinámicamente, integración de contenido multimedia con vídeo de fondo y sistemas de captura de datos mediante formularios complejos, cubriendo tanto la atención al cliente como un portal estructurado de captación de talento (recruitment).",
+        "reto_tecnico": "El objetivo principal a nivel técnico fue construir una interfaz fluida, interactiva y accesible sin depender de frameworks externos, utilizando puro HTML5 y CSS3. Para la arquitectura visual, implementé 'Flexbox', garantizando una distribución escalable de las tarjetas de productos y el equipo. Se aplicó un rigor estricto en la semántica web (uso de header, nav, section, footer) para maximizar la accesibilidad y el SEO. Adicionalmente, el diseño integra un 'navbar' de posición fija con transiciones de estado y formularios validados nativamente con segmentación semántica mediante 'fieldset', asegurando una interacción robusta.",
+        "tecnologias": ["HTML5", "CSS3", "Flexbox", "Semantic Web", "UI/UX"],
+        "enlace": "https://github.com/victoriam312/Gym-Landing-Page",
+        "categoria": "Frontend"
+    },
+
+    {
+        "id": "",
+        "titulo": "",
+        "descripcion": "",
+        "tecnologias": [],
+        "enlace": "",
+        "categoria": ""
+    }
+    
+
+
+]
