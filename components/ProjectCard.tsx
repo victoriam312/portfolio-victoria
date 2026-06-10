@@ -48,10 +48,7 @@ export default function ProjectCard({project}: ProjectProps) {
                                 {project.tecnologias.join(', ')}
                             </span>;
                         </div>
-                        <div>
-                            <span className="text-blue-400">status</span>:{" "}
-                            <span className="text-orange-400">"production"</span>;
-                        </div>
+                        
                         {project.enlace && (
                             <div className="mt-2">
                                 <span className="text-purple-400">a</span>:{" "}

@@ -1,6 +1,17 @@
 [
     {
-        "id": "procesador-xml",
+        "id": "HostFix",
+        "titulo": "HostFix - Panel de Control Hotelero",
+        "descripcion": "Aplicación multiplataforma diseñada para la gestión integral de incidencias, tickets de mantenimiento y partes de trabajo en cadenas hoteleras.",
+        "descripcion_detallada": "El proyecto centraliza la comunicación entre los departamentos de recepción, dirección y servicio técnico. Cuenta con un sistema multisede para el filtrado de incidencias por hotel, CRUD completo de tickets y un registro detallado de partes de trabajo que incluye el control de materiales. La arquitectura está preparada para el control de roles (Administración, Recepción, Servicio Técnico y Dirección).",
+        "reto_tecnico": "El principal reto fue aplicar arquitecturas de ciberseguridad para entornos de producción. Se implementó un aislamiento estricto de credenciales de SQL Server mediante variables de entorno y una estrategia de hashing de contraseñas con el algoritmo jBCrypt. A nivel de base de datos, se aseguró la integridad referencial utilizando control de transacciones manual (autoCommit = false y rollback) para operaciones complejas.",
+        "tecnologias": ["Kotlin Multiplatform", "Compose", "SQL Server", "JDBC", "jBCrypt", "Gradle"],
+        "enlace": "https://github.com/victoriam312/HostFix",
+        "categoria": "App Multiplataforma"
+    },
+    
+    {
+        "id": "Procesador_contratos_xml",
         "titulo": "Procesador de Contratos XML",
         "descripcion": "Aplicación Java para la ingesta, procesamiento y transformación de grandes volúmenes de datos de contratos públicos hacia una base de datos MySQL.",
         "descripcion_detallada": "Este desarrollo consiste en una herramienta especializada en la gestión y migración de datos de contratos públicos procedentes de la Junta de Andalucía. La aplicación se encarga de leer ficheros XML estructurados con un gran volumen de registros, procesar e insertar de manera óptima dicha información en un modelo relacional en MySQL y, finalmente, exportar un nuevo archivo XML secundario totalmente sanitizado, del cual se han eliminado automáticamente los campos protegidos o sensibles para su distribución pública.",
@@ -74,17 +85,8 @@
         "tecnologias": ["HTML5", "CSS3", "Flexbox", "Semantic Web", "UI/UX"],
         "enlace": "https://github.com/victoriam312/Gym-Landing-Page",
         "categoria": "Frontend"
-    },
-
-    {
-        "id": "",
-        "titulo": "",
-        "descripcion": "",
-        "tecnologias": [],
-        "enlace": "",
-        "categoria": ""
     }
+
     
-
-
+    
 ]

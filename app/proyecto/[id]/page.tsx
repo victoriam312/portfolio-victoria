@@ -1,14 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import projects from '../../../data/projects.json';
+// Volvemos a importar tu JSON directamente
+import projects from '@/data/projects.json';
 
-// 1. Añadimos 'async' a la función y tipamos 'params' como una Promesa
 export default async function ProyectoDetalle({ params }: { params: Promise<{ id: string }> }) {
   
-  // 2. Usamos 'await' para desenvolver la promesa y obtener el ID real de la URL
   const { id } = await params;
 
-  // 3. Ahora sí, buscamos el proyecto usando el ID correcto
+  // Buscamos el proyecto directamente en tu JSON local
   const proyecto = projects.find((p) => p.id === id);
 
   if (!proyecto) {
@@ -39,10 +38,9 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ id
           </h1>
         </div>
 
-        {/* CUERPO DEL PROYECTO (Layout 2/3 y 1/3) */}
+        {/* CUERPO DEL PROYECTO */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
-          {/* COLUMNA PRINCIPAL (Izquierda - Explicación técnica) */}
           <div className="md:col-span-2 space-y-8">
             <section>
               <h2 className="text-xl font-bold text-white mb-4 border-l-2 border-cyan-500 pl-3">
@@ -80,7 +78,7 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ id
             </section>
           </div>
 
-          {/* SIDEBAR (Derecha - Detalles y Links) */}
+          {/* SIDEBAR */}
           <div className="space-y-6">
             <div className="bg-[#09090a] border border-[#1e1e22] rounded-xl p-6 shadow-lg">
               <h3 className="text-sm font-mono text-gray-500 mb-4 uppercase tracking-wider">
