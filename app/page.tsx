@@ -20,11 +20,47 @@ export default function Home() {
     <main className="min-h-screen bg-[#0a0a0c] text-gray-100 p-6 md:p-16 selection:bg-cyan-500 selection:text-black font-sans">
       <div className="max-w-7xl mx-auto">
         
-        {/* ENCABEZADO */}
-        <div className="mb-8 border-b border-[#1e1e22] pb-8">
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white uppercase">
-            Proyectos y Repositorios
+        {/* PRESENTACIÓN */}
+        <header className="mb-14">
+          <p className="font-mono text-sm text-cyan-400">
+            &gt; whoami
+          </p>
+          <h1 className="mt-3 text-4xl md:text-6xl font-black tracking-tight text-white">
+            Victoria Martín Marín
           </h1>
+          <p className="mt-4 max-w-3xl text-lg md:text-xl text-gray-300">
+            Desarrolladora de software en formación. Técnico Superior en DAM y Máster en IA,
+            ahora estudiando en 42 Málaga.
+          </p>
+          <p className="mt-3 max-w-3xl text-gray-400">
+            Me interesan el backend, las aplicaciones multiplataforma y la automatización:
+            herramientas que resuelven problemas reales.
+          </p>
+          <nav aria-label="Enlaces de contacto" className="mt-6 flex flex-wrap gap-3 font-mono text-sm">
+            <a
+              href="https://www.linkedin.com/in/victoria-martin-marin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-[#29292e] px-4 py-2 text-gray-200 transition-colors hover:border-cyan-400 hover:text-cyan-400"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/victoriam312"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-[#29292e] px-4 py-2 text-gray-200 transition-colors hover:border-cyan-400 hover:text-cyan-400"
+            >
+              GitHub
+            </a>
+          </nav>
+        </header>
+
+        {/* ENCABEZADO DE PROYECTOS */}
+        <div className="mb-8 border-b border-[#1e1e22] pb-8">
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white uppercase">
+            Proyectos y Repositorios
+          </h2>
           <p className="mt-4 text-gray-400 font-mono text-sm">
             &gt; Catálogo de proyectos y retos técnicos.
           </p>

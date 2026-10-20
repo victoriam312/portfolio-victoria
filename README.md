@@ -55,5 +55,5 @@ La versión publicada se despliega automáticamente en Vercel con cada cambio en
 ## Contacto
 
 - Web: https://portfolio-victoria-beta.vercel.app
-- LinkedIn: [Victoria Martín Marín](https://www.linkedin.com/in/victoria-mart%C3%ADn-mar%C3%ADn-6b529a1b7)
+- LinkedIn: [Victoria Martín Marín](https://www.linkedin.com/in/victoria-martin-marin)
 - GitHub: [@victoriam312](https://github.com/victoriam312)
