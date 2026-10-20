@@ -30,7 +30,7 @@ export default function Home() {
           </h1>
           <p className="mt-4 max-w-3xl text-lg md:text-xl text-gray-300">
             Desarrolladora de software en formación. Técnico Superior en DAM y Máster en IA,
-            ahora estudiando en 42 Málaga.
+            ahora estudiando en 42 Málaga – Fundación Telefónica.
           </p>
           <p className="mt-3 max-w-3xl text-gray-400">
             Me interesan el backend, las aplicaciones multiplataforma y la automatización:
@@ -52,6 +52,13 @@ export default function Home() {
               className="rounded-lg border border-[#29292e] px-4 py-2 text-gray-200 transition-colors hover:border-cyan-400 hover:text-cyan-400"
             >
               GitHub
+            </a>
+            <a
+              href="/CV_Victoria_Martin_Marin.pdf"
+              download
+              className="rounded-lg border border-cyan-400 bg-cyan-400/10 px-4 py-2 text-cyan-300 transition-colors hover:bg-cyan-400 hover:text-black"
+            >
+              Descargar CV
             </a>
           </nav>
         </header>
