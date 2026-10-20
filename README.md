@@ -1,5 +1,7 @@
 # Portfolio · Victoria Martín
 
+**🌐 Ver la web:** https://portfolio-victoria-beta.vercel.app
+
 Web personal donde reúno mis proyectos de desarrollo: aplicaciones multiplataforma, backend en Java, apps Android y web.
 
 Cada proyecto tiene su ficha con descripción, el reto técnico que resolví, las tecnologías usadas y el enlace a su repositorio.
@@ -46,9 +48,12 @@ npm run dev
 
 Y abrir http://localhost:3000.
 
+La versión publicada se despliega automáticamente en Vercel con cada cambio en `main`.
+
 `lib/github.ts` necesita un token en la variable `GITHUB_TOKEN` (en `.env.local`, que no se sube al repo). La web no lo usa todavía.
 
 ## Contacto
 
+- Web: https://portfolio-victoria-beta.vercel.app
 - LinkedIn: [Victoria Martín Marín](https://www.linkedin.com/in/victoria-mart%C3%ADn-mar%C3%ADn-6b529a1b7)
 - GitHub: [@victoriam312](https://github.com/victoriam312)
